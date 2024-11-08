@@ -1,37 +1,37 @@
 
-# ¸ê®Æµ²ºc½Æ²ß¸ê®Æ
+# è³‡æ–™çµæ§‹è¤‡ç¿’è³‡æ–™
 
-## 1. Ãìµ²¦ê¦C¡]Linked List¡^
+## 1. éˆçµä¸²åˆ—ï¼ˆLinked Listï¼‰
 
-Ãìµ²¦ê¦C¬O¤@ºØ½u©Ê¸ê®Æµ²ºc¡A¥Ñ¤@¨t¦C¸`ÂI¡]Node¡^²Õ¦¨¡A¨C­Ó¸`ÂI¥]§t¸ê®Æ©M«ü¦V¤U¤@­Ó¸`ÂIªº«ü¼Ğ¡CÃìµ²¦ê¦Cªº¯SÂI¬O¥i¥H°ÊºA¤À°t°O¾ĞÅé¡A¤è«K´¡¤J©M§R°£¾Ş§@¡A¦ı³X°İ®Ä²v¸û§C¡C
+éˆçµä¸²åˆ—æ˜¯ä¸€ç¨®ç·šæ€§è³‡æ–™çµæ§‹ï¼Œç”±ä¸€ç³»åˆ—ç¯€é»ï¼ˆNodeï¼‰çµ„æˆï¼Œæ¯å€‹ç¯€é»åŒ…å«è³‡æ–™å’ŒæŒ‡å‘ä¸‹ä¸€å€‹ç¯€é»çš„æŒ‡æ¨™ã€‚éˆçµä¸²åˆ—çš„ç‰¹é»æ˜¯å¯ä»¥å‹•æ…‹åˆ†é…è¨˜æ†¶é«”ï¼Œæ–¹ä¾¿æ’å…¥å’Œåˆªé™¤æ“ä½œï¼Œä½†è¨ªå•æ•ˆç‡è¼ƒä½ã€‚
 
-### Ãìµ²¦ê¦C¸`ÂIªºµ²ºc
+### éˆçµä¸²åˆ—ç¯€é»çš„çµæ§‹
 
 ```cpp
 #include <iostream>
 using namespace std;
 
 struct Node {
-    int data;    // Àx¦s¸ê®Æ
-    Node* next;  // «ü¦V¤U¤@­Ó¸`ÂIªº«ü¼Ğ
+    int data;    // å„²å­˜è³‡æ–™
+    Node* next;  // æŒ‡å‘ä¸‹ä¸€å€‹ç¯€é»çš„æŒ‡æ¨™
 
-    Node(int val) : data(val), next(nullptr) {}  // ¸`ÂIºc³y¨ç¼Æ
+    Node(int val) : data(val), next(nullptr) {}  // ç¯€é»æ§‹é€ å‡½æ•¸
 };
 ```
 
-### ²K¥[¸`ÂI
+### æ·»åŠ ç¯€é»
 
-#### ¦bÃìµ²¦ê¦CªºÀY³¡´¡¤J
+#### åœ¨éˆçµä¸²åˆ—çš„é ­éƒ¨æ’å…¥
 
 ```cpp
 void insertAtHead(Node*& head, int val) {
-    Node* newNode = new Node(val);  // ³Ğ«Ø·s¸`ÂI
-    newNode->next = head;           // ·s¸`ÂI«ü¦V¥Ø«eªºÀY¸`ÂI
-    head = newNode;                 // §ó·sÀY¸`ÂI¬°·s¸`ÂI
+    Node* newNode = new Node(val);  // å‰µå»ºæ–°ç¯€é»
+    newNode->next = head;           // æ–°ç¯€é»æŒ‡å‘ç›®å‰çš„é ­ç¯€é»
+    head = newNode;                 // æ›´æ–°é ­ç¯€é»ç‚ºæ–°ç¯€é»
 }
 ```
 
-#### ¦bÃìµ²¦ê¦Cªº§À³¡´¡¤J
+#### åœ¨éˆçµä¸²åˆ—çš„å°¾éƒ¨æ’å…¥
 
 ```cpp
 void insertAtTail(Node*& head, int val) {
@@ -48,9 +48,9 @@ void insertAtTail(Node*& head, int val) {
 }
 ```
 
-### §R°£¸`ÂI
+### åˆªé™¤ç¯€é»
 
-#### §R°£«ü©w­Èªº¸`ÂI
+#### åˆªé™¤æŒ‡å®šå€¼çš„ç¯€é»
 
 ```cpp
 void deleteNode(Node*& head, int val) {
@@ -75,67 +75,67 @@ void deleteNode(Node*& head, int val) {
 
 ---
 
-## 2. ¤G¤¸¾ğ¡]Binary Tree¡^
+## 2. äºŒå…ƒæ¨¹ï¼ˆBinary Treeï¼‰
 
-¤G¤¸¾ğ¬O¤@ºØ¾ğ§Î¸ê®Æµ²ºc¡A¨C­Ó¸`ÂI³Ì¦h¦³¨â­Ó¤l¸`ÂI¡A¤À§O¬O¥ª¤l¸`ÂI©M¥k¤l¸`ÂI¡C
+äºŒå…ƒæ¨¹æ˜¯ä¸€ç¨®æ¨¹å½¢è³‡æ–™çµæ§‹ï¼Œæ¯å€‹ç¯€é»æœ€å¤šæœ‰å…©å€‹å­ç¯€é»ï¼Œåˆ†åˆ¥æ˜¯å·¦å­ç¯€é»å’Œå³å­ç¯€é»ã€‚
 
-### ¤G¤¸¾ğ¸`ÂIªºµ²ºc
+### äºŒå…ƒæ¨¹ç¯€é»çš„çµæ§‹
 
 ```cpp
 struct TreeNode {
-    int data;            // ¸`ÂI¸ê®Æ
-    TreeNode* left;      // ¥ª¤l¸`ÂI
-    TreeNode* right;     // ¥k¤l¸`ÂI
+    int data;            // ç¯€é»è³‡æ–™
+    TreeNode* left;      // å·¦å­ç¯€é»
+    TreeNode* right;     // å³å­ç¯€é»
 
-    TreeNode(int val) : data(val), left(nullptr), right(nullptr) {}  // ¸`ÂIºc³y¨ç¼Æ
+    TreeNode(int val) : data(val), left(nullptr), right(nullptr) {}  // ç¯€é»æ§‹é€ å‡½æ•¸
 };
 ```
 
-### «e§Ç¹M¾ú¡]Preorder Traversal¡^
+### å‰åºéæ­·ï¼ˆPreorder Traversalï¼‰
 
-«e§Ç¹M¾úªº¶¶§Ç¬O¥ı³X°İ®Ú¸`ÂI¡AµM«á³X°İ¥ª¤l¾ğ¡A³Ì«á³X°İ¥k¤l¾ğ¡C
+å‰åºéæ­·çš„é †åºæ˜¯å…ˆè¨ªå•æ ¹ç¯€é»ï¼Œç„¶å¾Œè¨ªå•å·¦å­æ¨¹ï¼Œæœ€å¾Œè¨ªå•å³å­æ¨¹ã€‚
 
 ```cpp
 void preorderTraversal(TreeNode* root) {
     if (root != nullptr) {
-        cout << root->data << " ";       // ³X°İ®Ú¸`ÂI
-        preorderTraversal(root->left);    // »¼°j³X°İ¥ª¤l¾ğ
-        preorderTraversal(root->right);   // »¼°j³X°İ¥k¤l¾ğ
+        cout << root->data << " ";       // è¨ªå•æ ¹ç¯€é»
+        preorderTraversal(root->left);    // éè¿´è¨ªå•å·¦å­æ¨¹
+        preorderTraversal(root->right);   // éè¿´è¨ªå•å³å­æ¨¹
     }
 }
 ```
 
-### ¤¤§Ç¹M¾ú¡]Inorder Traversal¡^
+### ä¸­åºéæ­·ï¼ˆInorder Traversalï¼‰
 
-¤¤§Ç¹M¾úªº¶¶§Ç¬O¥ı³X°İ¥ª¤l¾ğ¡AµM«á³X°İ®Ú¸`ÂI¡A³Ì«á³X°İ¥k¤l¾ğ¡C
+ä¸­åºéæ­·çš„é †åºæ˜¯å…ˆè¨ªå•å·¦å­æ¨¹ï¼Œç„¶å¾Œè¨ªå•æ ¹ç¯€é»ï¼Œæœ€å¾Œè¨ªå•å³å­æ¨¹ã€‚
 
 ```cpp
 void inorderTraversal(TreeNode* root) {
     if (root != nullptr) {
-        inorderTraversal(root->left);     // »¼°j³X°İ¥ª¤l¾ğ
-        cout << root->data << " ";        // ³X°İ®Ú¸`ÂI
-        inorderTraversal(root->right);    // »¼°j³X°İ¥k¤l¾ğ
+        inorderTraversal(root->left);     // éè¿´è¨ªå•å·¦å­æ¨¹
+        cout << root->data << " ";        // è¨ªå•æ ¹ç¯€é»
+        inorderTraversal(root->right);    // éè¿´è¨ªå•å³å­æ¨¹
     }
 }
 ```
 
-### «á§Ç¹M¾ú¡]Postorder Traversal¡^
+### å¾Œåºéæ­·ï¼ˆPostorder Traversalï¼‰
 
-«á§Ç¹M¾úªº¶¶§Ç¬O¥ı³X°İ¥ª¤l¾ğ¡AµM«á³X°İ¥k¤l¾ğ¡A³Ì«á³X°İ®Ú¸`ÂI¡C
+å¾Œåºéæ­·çš„é †åºæ˜¯å…ˆè¨ªå•å·¦å­æ¨¹ï¼Œç„¶å¾Œè¨ªå•å³å­æ¨¹ï¼Œæœ€å¾Œè¨ªå•æ ¹ç¯€é»ã€‚
 
 ```cpp
 void postorderTraversal(TreeNode* root) {
     if (root != nullptr) {
-        postorderTraversal(root->left);   // »¼°j³X°İ¥ª¤l¾ğ
-        postorderTraversal(root->right);  // »¼°j³X°İ¥k¤l¾ğ
-        cout << root->data << " ";        // ³X°İ®Ú¸`ÂI
+        postorderTraversal(root->left);   // éè¿´è¨ªå•å·¦å­æ¨¹
+        postorderTraversal(root->right);  // éè¿´è¨ªå•å³å­æ¨¹
+        cout << root->data << " ";        // è¨ªå•æ ¹ç¯€é»
     }
 }
 ```
 
-### ¤G¤¸¾ğ¹M¾ú½d¨Ò
+### äºŒå…ƒæ¨¹éæ­·ç¯„ä¾‹
 
-°²³]¤G¤¸¾ğµ²ºc¦p¤U¡G
+å‡è¨­äºŒå…ƒæ¨¹çµæ§‹å¦‚ä¸‹ï¼š
 
 ```
     A
@@ -145,19 +145,19 @@ void postorderTraversal(TreeNode* root) {
 D   E   F
 ```
 
-¹M¾úµ²ªG¡G
+éæ­·çµæœï¼š
 
-- **«e§Ç¹M¾ú**¡G`A B D E C F`
-- **¤¤§Ç¹M¾ú**¡G`D B E A C F`
-- **«á§Ç¹M¾ú**¡G`D E B F C A`
+- **å‰åºéæ­·**ï¼š`A B D E C F`
+- **ä¸­åºéæ­·**ï¼š`D B E A C F`
+- **å¾Œåºéæ­·**ï¼š`D E B F C A`
 
-### ¥Dµ{¦¡´ú¸Õ
+### ä¸»ç¨‹å¼æ¸¬è©¦
 
-¥H¤U½d¨Ò®i¥Ü¦p¦ó³Ğ«Ø¤G¤¸¾ğ¨Ã¶i¦æ¤TºØ¹M¾ú¡G
+ä»¥ä¸‹ç¯„ä¾‹å±•ç¤ºå¦‚ä½•å‰µå»ºäºŒå…ƒæ¨¹ä¸¦é€²è¡Œä¸‰ç¨®éæ­·ï¼š
 
 ```cpp
 int main() {
-    // ³Ğ«Ø¤G¤¸¾ğ
+    // å‰µå»ºäºŒå…ƒæ¨¹
     TreeNode* root = new TreeNode('A');
     root->left = new TreeNode('B');
     root->right = new TreeNode('C');
@@ -165,15 +165,15 @@ int main() {
     root->left->right = new TreeNode('E');
     root->right->right = new TreeNode('F');
 
-    cout << "«e§Ç¹M¾ú: ";
+    cout << "å‰åºéæ­·: ";
     preorderTraversal(root);
     cout << endl;
 
-    cout << "¤¤§Ç¹M¾ú: ";
+    cout << "ä¸­åºéæ­·: ";
     inorderTraversal(root);
     cout << endl;
 
-    cout << "«á§Ç¹M¾ú: ";
+    cout << "å¾Œåºéæ­·: ";
     postorderTraversal(root);
     cout << endl;
 
@@ -181,14 +181,14 @@ int main() {
 }
 ```
 
-### °õ¦æµ²ªG
+### åŸ·è¡Œçµæœ
 
 ```
-«e§Ç¹M¾ú: A B D E C F
-¤¤§Ç¹M¾ú: D B E A C F
-«á§Ç¹M¾ú: D E B F C A
+å‰åºéæ­·: A B D E C F
+ä¸­åºéæ­·: D B E A C F
+å¾Œåºéæ­·: D E B F C A
 ```
 
 ---
 
-¥H¤W¤º®e´£¨Ñ¤FÃìµ²¦ê¦Cªº°ò¥»¾Ş§@©M¤G¤¸¾ğªº¤TºØ¹M¾ú¤è¦¡ªº¸Ô²Ó»¡©ú¤Î C++ ¹ê²{µ{¦¡½X¡C§Æ±æ³o¨Ç¤º®e¯àÀ°§U§A§ó¦n¦a²z¸ÑÃìµ²¦ê¦C©M¤G¤¸¾ğªº°ò¥»ª¾ÃÑ¡I
+ä»¥ä¸Šå…§å®¹æä¾›äº†éˆçµä¸²åˆ—çš„åŸºæœ¬æ“ä½œå’ŒäºŒå…ƒæ¨¹çš„ä¸‰ç¨®éæ­·æ–¹å¼çš„è©³ç´°èªªæ˜åŠ C++ å¯¦ç¾ç¨‹å¼ç¢¼ã€‚å¸Œæœ›é€™äº›å…§å®¹èƒ½å¹«åŠ©ä½ æ›´å¥½åœ°ç†è§£éˆçµä¸²åˆ—å’ŒäºŒå…ƒæ¨¹çš„åŸºæœ¬çŸ¥è­˜ï¼
