@@ -38,11 +38,11 @@ void heapSort(vector<int> &arr)
     }
     //這邊主要用於由小排到大
     // 一個一個從堆中提取元素
-    /*for (int i = n - 1; i > 0; i--)
+    for (int i = n - 1; i > 0; i--)
     {
         swap(arr[0], arr[i]); // 將當前根移到數組末尾
         heapify(arr, i, 0);   // 在縮小的堆上調用最大堆化
-    }*/
+    }
 }
 
 int main()
